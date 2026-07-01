@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Юрий & Софья — свадебное приглашение</title>
+  <meta name="description" content="Приглашение на свадьбу Александра и Екатерины" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="nav__logo" href="#home">Юрий & Софья</a>
+    <div class="nav__links">
+      <a class="active" href="#home">⌂ Главная</a>
+      <a href="#plan">▣ План дня</a>
+      <a href="#restaurant">⌖ Ресторан</a>
+      <a href="#dress">♢ Дресс-код</a>
+      <a href="#form">☷ Анкета</a>
+    </div>
+  </nav>
+
+  <header id="home" class="hero section">
+    <div class="hero__content reveal">
+      <div class="heart"></div>
+      <h1> Юрий <span> и </span> Софья</h1>
+      <div class="divider"><span></span>♥<span></span></div>
+      <p class="hero__text">Дорогие наши родные и друзья!</p> 
+      <p class="hero__text1">Мы счастливы пригласить вас на самый важный день в нашей жизни - нашу свадьбу!</p>
+      <p class="hero__date">12 сентября | 2026 |  суббота</p>
+      <div class="timer" id="timer">
+        <div><span class="timer__icon">♡</span><strong id="days">00</strong><small>дня</small></div>
+        <div><span class="timer__icon">◷</span><strong id="hours">00</strong><small>часов</small></div>
+        <div><span class="timer__icon">◴</span><strong id="minutes">00</strong><small>минуты</small></div>
+        <div><span class="timer__icon">♡</span><strong id="seconds">00</strong><small>секунд</small></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="plan" class="section plan reveal">
+      <div class="container">
+        <div class="section-title">
+          <div class="divider"><span></span>♥<span></span></div>
+          <h2>План дня</h2>
+          <p>Небольшая программа нашего праздника</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline__item"><div class="timeline__icon">🥂</div><time>13:00</time><h3>Сбор гостей</h3><p>Встречаемся, улыбаемся и настраиваемся на праздник.</p></article>
+          <article class="timeline__item"><div class="timeline__icon">💍</div><time>14:00</time><h3>Церемония</h3><p>Мы скажем друг другу главные слова.</p></article>
+          <article class="timeline__item"><div class="timeline__icon">🍽</div><time>15:00</time><h3>Банкет</h3><p>Вкусный ужин, тосты и теплые слова.</p></article>
+          <article class="timeline__item"><div class="timeline__icon">🎂</div><time>22:00</time><h3>Торт</h3><p>Сладкий момент для всех нас.</p></article>
+          <article class="timeline__item"><div class="timeline__icon">🎉</div><time>00:00</time><h3>Финал вечера</h3><p>Танцы, веселье и яркие эмоции.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="restaurant" class="section card-section reveal">
+      <div class="container narrow card">
+        <p class="eyebrow">Банкетный зал</p>
+        <h2>Капитан клуб Жуковский</h2>
+        <p>г. Жуковский, Речной пр., 17</p>
+        <a class="button" href="https://yandex.ru/maps/?text=Москва%2C%20ул.%20Примерная%2C%201" target="_blank" rel="noopener">Построить маршрут</a>
+      </div>
+    </section>
+
+    <section id="dress" class="section card-section reveal">
+      <div class="container narrow card">
+        <p class="eyebrow">Дресс-код</p>
+        <h2>Палитра вечера</h2>
+        <p>Будем рады, если вы поддержите нежную голубую гамму нашего праздника.</p>
+        <div class="palette"><span style="--color:#ffffff"></span><span style="--color:#eaf7ff"></span><span style="--color:#cfe9fb"></span><span style="--color:#8ebce2"></span><span style="--color:#4d79ad"></span></div>
+      </div>
+    </section>
+
+    <section id="form" class="section card-section reveal">
+      <div class="container narrow card">
+        <p class="eyebrow">Анкета</p>
+        <h2>Подтвердите присутствие</h2>
+        <p>Пожалуйста, заполните короткую анкету до 1 сентября, чтобы мы могли всё подготовить.</p>
+        <a class="button" href="https://forms.gle/" target="_blank" rel="noopener">Заполнить анкету</a>
+      </div>
+    </section>
+
+    <section class="section final reveal">
+      <div class="container narrow">
+        <div class="divider"><span></span>♥<span></span></div>
+        <h2>Ждем вас!</h2>
+        <p>С любовью, Юрий и Софья</p>
+      </div>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
