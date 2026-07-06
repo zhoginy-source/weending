@@ -37,16 +37,6 @@ body {
   background-attachment: fixed;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background: 
-linear-gradient(125deg, transparent 0 40%, rgba(255,255,255,.07) 40% 45%, transparent 45% 100%),
-    linear-gradient(35deg, transparent 0 55%, rgba(255,255,255,.07) 55% 58%, transparent 58% 100%);
-  opacity: 0.7;
-}
 
 a {
   color: inherit;
@@ -114,12 +104,10 @@ a {
   overflow: hidden;
   min-height: 470px;
   padding: 62px 48px;
-  background:
-        linear-gradient(rgba(255,255,255,.82), rgba(255,255,255,.82));
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background: rgba(255,255,255,.82);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .section + .section {
@@ -322,11 +310,11 @@ p {
 }
 
 .photo-restaurant {
-  background-image: url("images/rest.avif");
+  background-image: url("./images/rest.avif");
 }
 
 .photo-ceremony {
-  background-image: url(images/zal.avif);
+  background-image: url("./images/zal.avif");
 }
 
 .map-button {
@@ -458,6 +446,24 @@ p {
     height:auto;
     display:block;
 }
+.form-button {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 28px auto 0;
+  min-height: 48px;
+  padding: 0 28px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #91a1b8, #65758e);
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  box-shadow: 0 14px 28px rgba(72, 86, 105, 0.18);
+}
+
 
 .color {
   width: 58px;
@@ -552,6 +558,37 @@ button {
 /* ===========================
    Footer and animation
 =========================== */
+.footer-section{
+    min-height:320px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.footer-heart{
+    font-size:40px;
+    color:#8fa4c4;
+    margin-top:22px;
+}
+
+.footer-section h2{
+    margin:0;
+    font-family:"Cormorant Garamond",serif;
+    font-size:42px;
+    font-weight:400;
+    color:#5f6677;
+}
+
+.footer-date{
+    margin-top:22px;
+    font-size:20px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#7a8294;
+}
+
 
 
 .line-heart {
@@ -594,32 +631,6 @@ button {
     background: var(--card-bg);
   }
 
-  .footer-section{
-    min-height:240px;
-    padding:48px 24px;
-}
-
-.footer-heart{
-    font-size:30px;
-}
-
-.footer-section h2{
-    font-size:38px;
-}
-
-.footer-date{
-    font-size:16px;
-    letter-spacing:1px;
-}
-
-.footer-names{
-    font-size:54px;
-}
-
-  body::before {
-    display: none;
-  }
-
   .nav {
     top: 12px;
     right: 12px;
@@ -628,38 +639,28 @@ button {
     transform: none;
   }
 
-.burger {
+  .burger {
     display: grid;
     gap: 4px;
-
     width: 44px;
     height: 44px;
-
     padding: 10px;
-
     border: 0;
     border-radius: 50%;
-
     background: rgba(255,255,255,.82);
-
     box-shadow: 0 8px 18px rgba(54,73,96,.12);
-
     backdrop-filter: blur(10px);
-
     cursor: pointer;
-}
+  }
 
-   .burger span {
+  .burger span {
     display: block;
-
-    width: 18px;      /* было почти на всю кнопку */
+    width: 18px;
     height: 2px;
-
-    margin: 0 auto;   /* центрируем */
-
+    margin: 0 auto;
     background: #617083;
     border-radius: 2px;
-}
+  }
 
   .nav__links {
     position: absolute;
@@ -714,12 +715,6 @@ button {
     font-size: 42px;
   }
 
-  .flowers-top-right {
-    width: 230px;
-    top: -10px;
-    right: -66px;
-  }
-
   .date {
     gap: 9px;
   }
@@ -748,13 +743,6 @@ button {
     font-size: 10px;
   }
 
-  .flowers-place,
-  .flowers-program,
-  .flowers-dress,
-  .flowers-form {
-    width: 185px;
-  }
-
   .timeline-row {
     grid-template-columns: 56px 18px 1fr;
     gap: 12px;
@@ -764,84 +752,25 @@ button {
     font-size: 23px;
   }
 
-  .color {
-    width: 52px;
-    height: 52px;
+  .dress-palette img {
+    max-width: 100%;
   }
 
+  .footer-section{
+    min-height:240px;
+    padding:48px 24px;
+  }
 
+  .footer-heart{
+    font-size:30px;
+  }
 
-.form-button {
-  position: relative;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .footer-section h2{
+    font-size:38px;
+  }
 
-   width: fit-content;
-    margin: 28px auto 0;
-
-  margin-top: 28px;
-  min-height: 48px;
-  padding: 0 28px;
-
-  border-radius: 999px;
-  background: linear-gradient(135deg, #91a1b8, #65758e);
-  color: #fff;
-  text-decoration: none;
-  font-size: 15px;
-
-  box-shadow: 0 14px 28px rgba(72, 86, 105, 0.18);
-}
-
-/* ================================
-   Footer
-================================ */
-
-.footer-section{
-    min-height:320px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-}
-
-.footer-heart{
-    font-size:40px;
-    color:#8fa4c4;
-    margin-bottom:24px;
-}
-
-.footer-section h2{
-    margin:0;
-
-    font-family:"Cormorant Garamond",serif;
-    font-size:42px;
-    font-weight:400;
-    color:#5f6677;
-}
-
-.footer-date{
-    margin-top:22px;
-
-    font-size:20px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    color:#7a8294;
-}
-
-.footer-names{
-    margin-top:36px;
-
-    font-family:"Cormorant Garamond",serif;
-    font-size:72px;
-    line-height:1;
-    color:#5d6576;
-}
-
-.footer-names span{
-    color:#8fa4c4;
+  .footer-date{
+    font-size:16px;
+    letter-spacing:1px;
+  }
 }
